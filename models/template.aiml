@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<aiml version="1.0">
+  {% for chat in chats %}
+	<category>
+		<pattern>{{ chat.question|upper }}</pattern>
+		<template>{{ chat.answer }}</template>
+	</category>
+  {% endfor %}
+</aiml>
